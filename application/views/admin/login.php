@@ -31,13 +31,13 @@
                             <h3 class="panel-title">Logar no SWMail</h3>
                         </div>
                         <div class="panel-body">
-                            <form method="post" action="<?php echo site_url('administrator/autenticar') ?>" role="form">
+                            <form method="post" action="<?php echo site_url('administrator/login/autenticar') ?>" role="form">
                                 <fieldset>
                                     <div class="form-group">
-                                        <input class="form-control" placeholder="Email" name="email" type="email" autofocus>
+                                        <input class="form-control" placeholder="Login" name="nm_login" type="text" autofocus>
                                     </div>
                                     <div class="form-group">
-                                        <input class="form-control" placeholder="Senha" name="password" type="password" value="">
+                                        <input class="form-control" placeholder="Senha" name="nm_senha" type="password" value="">
                                     </div>
                                     <button class="btn btn-lg btn-success btn-block">Entrar</button>
                                 </fieldset>

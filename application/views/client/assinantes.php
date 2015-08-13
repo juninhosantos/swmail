@@ -10,7 +10,8 @@
     <!-- /.row -->
     <div class="row">
         <div class="col-md-12">
-            <a href="<?php echo site_url('client/assinantes/importar') ?>" class="btn btn-primary pull-right">Importar Assinantes</a>
+            <a href="<?php echo site_url('client/assinantes/importarCSV') ?>" class="btn btn-primary pull-right">Importar Assinantes CSV</a>
+            <a style="margin-right: 15px" href="<?php echo site_url('client/assinantes/importar') ?>" class="btn btn-primary pull-right">Importar Assinantes em Texto</a>
             <br />
             <br />
             <br />
@@ -28,8 +29,8 @@
                             <td><?php echo $item->nm_assinante ?></td>
                             <td><?php echo $item->nm_lista ?></td>
                             <td>
-                                <a href="<?php echo site_url("client/assinantes/editar/".$item->cd_assinante) ?>"><i class="fa fa-pencil-square-o"></i></a>&nbsp;&nbsp;
-                                <a href="<?php echo site_url("client/assinantes/deletar/".$item->cd_assinante) ?>" onclick="var con = confirm('Tem certeza que deseja deletar?'); if(con){ return true; } return false;"><i class="fa fa-times"></i></a>
+                                <a href="<?php echo site_url("client/assinantes/editar/".$item->cd_assinante) ?>"title='Editar'><i class="fa fa-pencil-square-o"></i></a>&nbsp;&nbsp;
+                                <a href="<?php echo site_url("client/assinantes/deletar/".$item->cd_assinante) ?>" onclick="var con = confirm('Tem certeza que deseja deletar?'); if(con){ return true; } return false;" title="Excluir"><i class="fa fa-times"></i></a>
                             </td>
                         </tr>
                     <?php endforeach; ?>

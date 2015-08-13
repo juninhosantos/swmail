@@ -1,6 +1,6 @@
 <?php
 
-class Login extends CI_Controller {
+class Login extends MY_Controller {
 
     public function __construct() {
         parent::__construct();
@@ -29,5 +29,6 @@ class Login extends CI_Controller {
         $this->session->sess_destroy();
         redirect(site_url("client"));
     }
+
 
 }

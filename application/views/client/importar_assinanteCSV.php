@@ -10,12 +10,10 @@
     <!-- /.row -->
     <div class="row">
         <div class="col-md-12">
-            <form method="post" action="<?php echo site_url('client/assinantes/salvar') ?>" role="form">
+            <form method="post" action="<?php echo site_url('client/assinantes/salvarCSV') ?>" role="form" enctype="multipart/form-data">
                 <div class="form-group">
-                    <label>Copie e Cole os emails, linha por linha.</label><br/>
-                    <br />Ex.: teste@teste.com.br,Teste<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;teste2@teste2.com.br,Teste2
-                    <br /><br />
-                    <textarea class="form-control" name="assinantes" rows="15" required="required"></textarea>
+                    <small>Somente arquivos CSV</small>
+                    <input class="form-control" name="userfile" type="file"/>
                 </div>
                 <div class="form-group">
                     <label>Listas</label>
@@ -31,7 +29,7 @@
                     <button type="submit" class="btn btn-primary">Salvar</button>
                 </div>
             </form>
-             
+            
             <a href="<?php echo site_url('client/assinantes') ?>" class="btn btn-link"> <- Voltar</a>
         </div>
     </div>

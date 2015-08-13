@@ -26,8 +26,8 @@
                             <td><?php echo $item->cd_lista ?></td>
                             <td><?php echo $item->nm_lista ?></td>
                             <td>
-                                <a href="<?php echo site_url("client/listas/editar/".$item->cd_lista) ?>"><i class="fa fa-pencil-square-o"></i></a>&nbsp;&nbsp;
-                                <a href="<?php echo site_url("client/listas/deletar/".$item->cd_lista) ?>" onclick="var con = confirm('Tem certeza que deseja deletar?'); if(con){ return true; } return false;"><i class="fa fa-times"></i></a>
+                                <a href="<?php echo site_url("client/listas/editar/".$item->cd_lista) ?>"title='Editar'><i class="fa fa-pencil-square-o"></i></a>&nbsp;&nbsp;
+                                <a href="<?php echo site_url("client/listas/deletar/".$item->cd_lista) ?>" onclick="var con = confirm('Tem certeza que deseja deletar?'); if(con){ return true; } return false;" title="Excluir"><i class="fa fa-times"></i></a>
                             </td>
                         </tr>
                     <?php endforeach; ?>

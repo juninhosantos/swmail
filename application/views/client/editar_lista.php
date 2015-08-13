@@ -16,8 +16,8 @@
                 <?php if (!empty($listas)) : ?>
                     <?php foreach ($listas as $item) : ?>
                         <div class="form-group">
-                            <label>Nome da Lista</label>
-                            <input class="form-control" name="nm_lista" value="<?php echo $item->nm_lista ?>" required="required">
+                            <label>Nome da Lista  <small>(50 caracteres)</small></label>
+                            <input class="form-control" maxlength="50" value="<?php echo $item->nm_lista ?>" name="nm_lista" required="required">
                             <input type="hidden" name="cd_lista" value="<?php echo $item->cd_lista ?>">
                         </div>
                         <div class="form-group pull-right">
@@ -26,7 +26,8 @@
                     <?php endforeach; ?>
                 <?php endif; ?>
             </form>
-
+            <br><br><br>
+            <a href="<?php echo site_url('client/listas') ?>" class="btn btn-link"> <- Voltar</a>
         </div>
     </div>
     <!-- /.row -->

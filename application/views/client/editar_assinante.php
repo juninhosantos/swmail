@@ -30,7 +30,8 @@
                     <?php endforeach; ?>
                 <?php endif; ?>
             </form>
-
+             <br><br><br>
+            <a href="<?php echo site_url('client/assinantes') ?>" class="btn btn-link"> <- Voltar</a>
         </div>
     </div>
     <!-- /.row -->

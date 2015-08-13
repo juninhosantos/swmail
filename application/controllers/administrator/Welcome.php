@@ -7,7 +7,7 @@ class Welcome extends CI_Controller {
     private $dados;
 
     public function index() {
-        if(!$this->session->userdata('user')){
+        if(!$this->session->userdata('username')){
             redirect(site_url("administrator/login"));
         }
         $this->load->model("Admin_model", "admin");

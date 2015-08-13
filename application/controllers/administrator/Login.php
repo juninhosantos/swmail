@@ -1,16 +1,5 @@
 <?php
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
-/**
- * Description of Login
- *
- * @author Junior
- */
 class Login extends CI_Controller {
 
     public function __construct() {
@@ -22,17 +11,23 @@ class Login extends CI_Controller {
     }
 
     public function autenticar() {
-        $this->load->model("admin_model", "admin");
-        $usr = $this->admin->getUsuario();
-        if (!empty($usr)) {
-            $newdata = array(
-                'username' => 'johndoe',
-                'email' => 'johndoe@some-site.com',
-                'logged_in' => TRUE
-            );
+        $this->load->model("Admin_model", "admin");
+        $usr = $this->admin->getUsuario($_POST);
+        $newdata = array(
+            'username' => $usr->nm_administrador,
+            'email' => $usr->nm_login,
+            'id' => $usr->cd_matricula,
+            'logged_in' => TRUE
+        );
 
-            $this->session->set_userdata($newdata);
-        }
+        $this->session->set_userdata($newdata);
+
+        redirect(site_url("administrator"));
+    }
+
+    public function logout(){
+        $this->session->sess_destroy();
+        redirect(site_url("administrator"));
     }
 
 }
